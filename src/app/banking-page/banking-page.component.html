@@ -1,0 +1,48 @@
+<div class="container mtop">
+  <div class="row">
+<div class="col-md-12">
+    <table class="tabl">
+      <tr *ngFor="let ninja of ninjas">
+        <td>{{ninja.id}}</td>
+        <td>{{ninja.name}}</td>
+      </tr>
+    </table>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<h5>Install Node</h5>
+<p>Test Node:</p>
+<p class="indent">To see if Node is installed, using command Prompt or any command line tool, and type <code>node -v</code> or <span><code>node&#160;--version</code></span>. This should print a version number, so you’ll see something like this <code>v6.11.2</code>.</p>
+<p>Test NPM:</p>
+<p class="indent">To see if NPM is installed, type <code>npm -v</code> or <span><code>npm --version</code></span>. This should print a version number, so you’ll see something like this <code>3.10.10</code>.</p>
+<h5>Then install the Angular CLI globally.</h5>
+<p><code>npm install -g @angular/cli</code></p>
+<h5>Create a new project:</h5>
+<p><code>ng new mydream-app</code></p>
+<h5>Serve the application</h5>
+<p><code>ng serve</code> - It will open up in default browser, if it not opens use <code>ng serve --open</code> or <code>http://localhost:4200/</code> open this url in your browser.</p> 
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+  <div class="dropdown">
+    <button class="btn btn-default btn-danger" (click)="showHide = !showHide">Show/Hide</button>
+</div>
+
+<ul *ngIf="showHide">
+   <li  role="presentation" (click)="userTypeSelect($event)" [attr.data-selected]="false" 
+       (click)="hightlightStatus[i]=!hightlightStatus[i]" 
+       [class.highlight]="hightlightStatus[i]" 
+       *ngFor="let menu of menus, let i = index"> 
+       {{menu}} 
+   </li>
+</ul>
+<ul>
+  <li role="presentation" (click)="userTypeSelect($event)" ><a href="#">Local</a></li>
+  <li role="presentation" (click)="userTypeSelect($event)" ><a href="#">New</a></li>
+  <li role="presentation" (click)="userTypeSelect($event)" ><a href="#">Teo</a></li>
+</ul>
+</div>
+</div>
+</div>

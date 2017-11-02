@@ -1,0 +1,39 @@
+.workarea .container ,.footer .container {height:100%;}
+.backgg{ height: calc(100% - 183px);}
+.form-container {
+    display:block;
+    width:100%;
+    padding:2em;
+    margin: auto;
+    
+}
+
+.alert {
+    background: #e6cf75;
+    padding: 7px;
+    font-size: .9em;
+    margin-bottom: 0px;
+    display: inline-block;
+    animation: 2s alertAnim forwards;
+}
+
+.button {
+    margin-top: 3rem;
+}
+h1 {
+    margin-bottom: 2rem;
+    font-weight:bold;
+    font-size: 2em;
+}
+
+
+@keyframes alertAnim {
+    from {
+        opacity:0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
+}

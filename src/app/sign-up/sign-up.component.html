@@ -1,0 +1,60 @@
+<div class="container mtop">
+<div class="row">
+  <div class="col-md-12">
+    <h3>Angular 2 Form Validations Demo</h3>
+    <p>{{QuoteOfDay}}</p>
+    <table class="tabl">
+      <tr *ngFor="let ninja of ninjas">
+        <td>{{ninja.id}}</td>
+        <td>{{ninja.name}}</td>
+      </tr>
+    </table>
+
+    <ul>
+      <li *ngFor="let ninja of ninjas | slice:0:4">{{ninja.name}}</li>
+    </ul>
+    </div>
+    <div class="col-md-12">
+      <div class="row">
+    <div class="col-md-8 col-sm-8 col-xs-12">
+    <form id="submission" [formGroup]="fbform">
+        <div class="form-group">
+        <label for="name">Id</label>
+        <input type="text" class="form-control" placeholder="Id" [(ngModel)]="id" name="id" formControlName="id">
+        </div>
+        <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" placeholder="Name" [(ngModel)]="name" name="name" formControlName="name">
+        </div>
+        <button type="submit" (click)="fbPostData(id,name)" class="btn btn-default" [disabled]="!fbform.valid">Submit</button>
+    </form>
+    </div>
+      </div>
+      <div class="row">
+    <div class="col-md-8 col-sm-8 col-xs-12">
+    <form  [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" placeholder="Name" name="name" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" placeholder="Email" name="email"  formControlName="email"
+         (ngModelChange)="emailChanged(oldValue,newValue=$event)">
+      </div>
+      <div class="form-group">
+        <label for="email">Select City</label>
+        <select class="form-control" name="city" formControlName="city">
+          <option value="chennai">Chennai</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="delhi">Delhi</option>
+        </select>
+
+      </div>
+      <button type="submit" [disabled]="!form.valid">Submit</button>
+    </form>
+    </div>
+      </div>
+  </div>
+</div>
+</div>

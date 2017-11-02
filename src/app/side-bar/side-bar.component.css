@@ -1,0 +1,5 @@
+@media (max-width:1024px){
+     .HCM-nav-container ul li .HCM-hide-navLink-mobile{display:none;}
+}
+.header{margin: 51px 0 0 0}
+.menubr{position: absolute;top:34px;right: 0;background-image: linear-gradient(#04519b, #044687 60%, #033769);}

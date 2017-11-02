@@ -1,0 +1,21 @@
+.pointer{cursor: pointer}
+ul.listnone li span{float: right;opacity: 0.5}
+ul.listnone li{padding: 5px}
+ul.listnone li:hover{background: #a4c8e4}
+ul.listnone li span:hover{opacity: 1;cursor:pointer}
+#back-top {
+    bottom: 0;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    z-index: 999999;
+}
+agm-map {
+  height: 300px;
+}
+.tab{
+  border: 1px solid #000;
+  padding: 10px;
+    margin: 0 0 16px 0;
+}
+.blackbord{border: 1px solid #000}

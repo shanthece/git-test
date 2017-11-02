@@ -1,0 +1,5 @@
+.Lisst{text-align: center;border:1px solid #bcbcbc;padding: 10px;margin: 0 10px}
+ul{list-style: none}
+ul li {border: 1px solid}
+li span{float: right;position: relative;margin-right: 10px}
+.inp{margin: 5px 0 10px 0}

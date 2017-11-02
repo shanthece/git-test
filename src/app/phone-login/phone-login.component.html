@@ -1,0 +1,44 @@
+<div class="container mtop">
+  <div class="row">
+    <div class="col-md-8 col-sm-12 col-xs-12">
+  <div [hidden]="user">
+  <h3>Sign In with Your Phone Number</h3>
+  <form  [formGroup]="phoneform" id="phonlog">
+    <div class="form-group">
+        <label for="name">Phone Number (Now I'm providing only for Indian users)</label><br/>
+        <input type="text" formControlName="countrycode" [(ngModel)]="phoneNumber.country"  class="form-control widthc" placeholder="+91">
+       <input type="text" name="phoneno" [(ngModel)]="phoneNumber.line" formControlName="phoneno" class="form-control blck" placeholder="" maxlength="10">
+      </div>
+
+ 
+  
+  <div id="recaptcha-container"></div>
+  
+    <button (click)="sendLoginCode()" class="btn btn-default btn-success" [disabled]="!phoneform.valid">SMS Text Login Code</button>
+  </form>
+  <div *ngIf="windowRef.confirmationResult">
+    <hr>
+    <label for="code">Enter your Verification Code Here</label><br>
+    <input type="text" name="code" [(ngModel)]="verificationCode">
+    <button (click)="verifyLoginCode()">Verify</button>
+  </div>
+</div>
+<div *ngIf="user" [hidden]="suser">
+  <h3>Hi! </h3>
+  <h4>Only logged users can view this page ..</h4>
+  <!--<form id="submission" [formGroup]="fbform">
+        <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" class="form-control" placeholder="Name" [(ngModel)]="name" name="name" formControlName="name">
+        </div>
+        <button type="submit" (click)="fbPostData(name)" class="btn btn-default" [disabled]="!fbform.valid">Submit</button>
+   </form>-->
+</div>
+<div *ngIf="suser">
+  <h3>Hi shanth!</h3>
+
+</div>
+  </div>
+  </div>
+  <div class="row"><p>&#160;</p></div>
+</div>

@@ -1,0 +1,6 @@
+button[type='submit']{background:green; }
+button[type='submit']:hover{background:#bodcff; }
+button[type='submit']:disabled{background:#d5d6d6 }
+.tabl{border-collapse: collapse;border: 1px solid #ccc;width: 100%;}
+.tabl tr,td{border: 1px solid;text-align: center}
+ul{margin: 1em 0 .5em 0}

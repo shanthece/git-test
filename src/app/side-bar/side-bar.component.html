@@ -1,0 +1,36 @@
+ 
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        
+        <div class="navbar-header">
+          <a href="../" class="hidden-sm hidden-md hidden-lg navbar-brand" *ngIf="defaulttitle">Home</a>
+          <a href="../" class="hidden-sm hidden-md hidden-lg navbar-brand" *ngIf="!defaulttitle">{{mtitle}}</a>
+          <button (click)="showHide = !showHide" type="button" class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar">
+            <!--<span class="icon-bar"></span>-->
+            <cuppa-slidemenu [menulist]="menuItemsArray" (open)="onMenuOpen()" (close)="onMenuClose()" (onItemSelect)="onItemSelect($event)"></cuppa-slidemenu>
+            <!--<span class="icon-bar"></span>
+            <span class="icon-bar"></span>-->
+          </button>
+          
+          
+          
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li role="presentation" (click)="userTypeSelect($event)" [routerLinkActive]="['active']"><a routerLink="/Home">Home</a></li>
+            <!--<li role="presentation" (click)="userTypeSelect($event)" [routerLinkActive]="['active']"><a routerLink="/signup">Login</a></li>-->
+            <li role="presentation" (click)="userTypeSelect($event)" [routerLinkActive]="['active']"><a routerLink="/Check">Feautures</a></li>
+            <li role="presentation" (click)="userTypeSelect($event)" [routerLinkActive]="['active']"><a routerLink="/phone">Login</a></li>
+            <li role="presentation" (click)="userTypeSelect($event)" [routerLinkActive]="['active']"><a routerLink="/hireme">Hire me</a></li>
+            <li role="presentation" (click)="userTypeSelect($event)" [routerLinkActive]="['active']"><a routerLink="/documents">About Me</a></li>
+            <!--<li role="presentation" (click)="userTypeSelect($event)" [routerLinkActive]="['active']"><a routerLink="/banking">Blogs</a></li>-->
+          </ul>
+        </div><!--/.nav-collapse -->
+
+      </div>
+    </nav>
+    
+
+
+
+

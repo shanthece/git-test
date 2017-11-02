@@ -1,0 +1,173 @@
+body{margin:0;font-family:Interstate-Bold;}
+@font-face{font-family:Interstate-Bold;src:url(fonts/InterstateRom.ttf);}
+@font-face{font-family: 'HCM icons';src:url(fonts/HCM-icons.ttf);}
+
+.header {
+    background: linear-gradient(to top,#013E7D 0,#006496 30%,#008ABC 65%,#00BDF2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00BEF2', endColorstr='#013E7D', GradientType=0 );
+}
+.header::after, .header::before,.content-holder::after,.content-holder::before
+{
+    content: ' ';
+    display: table;
+}
+.content-holder {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 15px 20px 5px;
+}
+.footer-holder {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 15px 20px 5px;
+}
+.HCM-left{float:left}
+.HCM-right{float:right}
+.HCM-citi-aus {
+    position: relative;
+    display: block;
+    z-index: 1;
+    line-height: 20px;
+    margin-bottom: 26px;
+}
+.HCM-citi-aus:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 530px;
+    height: 60px;
+    background: url(/assets/img/shadow_line.png) left center no-repeat;
+    top: -100%;
+    right: -107px;
+    z-index: -1;
+}
+.HCM-citi-aus span{color:#ffffff;font-size:13px;}
+.HCM-nav-container {
+    display: inline-block;
+}
+.HCM-nav {
+    z-index: 7;
+}
+.HCM-nav-container .HCM-nav {
+    margin-top: 80px;
+    margin-left: 65px;
+    display: inline-block;
+    transition: left .6s ease;
+}
+.HCM-nav-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.HCM-nav-container ul li {
+    float: left;
+    background: url(/assets/img/menu_separator.png) 100% 50% no-repeat;
+    transition: all .6s ease;
+    text-align: left;
+}
+.HCM-nav-container ul li.HCM-has-subnav, .HCM-nav-container ul li.HCM-page-active {
+    position: relative;
+}
+.HCM-nav-container ul li a {
+    padding: 15px 10px;
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+}
+.HCM-button.HCM-button-supreme {
+    background: #00BDF2;
+    border-color: #00BDF2;
+    font-family: Interstate-Bold;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+.HCM-icon-lock:before {
+    content: '\0069';
+}
+[class*=HCM-icon-]:before {
+    display: inline-block;
+    font-family: 'HCM icons';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+span.HCM-stick-right {
+    float: right;transition:all .3s ease-in-out 0s;right: 15px;
+}
+.HCM-right:hover  span.HCM-stick-right{
+    float: right;right: 10px;
+	transition:all .3s ease-in-out 0s;
+}
+.HCM-button .HCM-stick-right.HCM-icon-mid {
+    height: 13.28px;
+}
+.HCM-button .HCM-stick-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 15px;
+}
+[class*=HCM-icon-]:before {
+    display: inline-block;
+    font-family: 'HCM icons';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.HCM-icon-chevron-r:before {
+    content: '\0049';
+}
+[role=button] {
+    color: inherit;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    /*white-space: pre;*/
+}
+.HCM-button {
+    border-radius: 6px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    width: auto;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    transition: background-color .6s,border-color .6s;
+}
+.HCM-button-supreme, .HCM-search-field {
+    display: block;
+    width:180px;
+}
+.HCM-button-supreme span:first-child {
+    display: inline-block;
+    margin-right: 14px;
+}
+.HCM-icon-mid {
+    font-size: 13.28px;
+}
+.HCM-footer {
+    background-color: #333;
+    padding:0px 0 30px 0px;
+}
+.HCM-left-fl{margin: 0px;}
+h6.HCM-disclaimer-text {
+    color: #CCC;
+    font-weight: 400;
+    clear: both;
+    margin: 0;
+    padding: 21px 0px 0 0px;
+    font-size: 11.6px;
+}

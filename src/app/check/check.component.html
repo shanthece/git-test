@@ -1,0 +1,206 @@
+<!--<div class="fullscreen-bg">
+  <video loop muted autoplay  class="fullscreen-bg__video">
+        <source src="/assets/img/polina.webm" type="video/webm">
+    </video>
+</div>-->
+    <div class="container mtop">
+      
+ 
+     <!--<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+   <input type="text" id="name"/>
+    
+    {{object.name}}<br/>
+    {{arr[0]}},{{arr[1]}},{{arr[2]}}<br/>
+    
+    
+</div>-->
+
+<div class="text-center">
+  <!--<app-title [subtitle]="subtitle"></app-title>
+  <h1 highlight>Nulla vitae elit libero, a pharetra augue mollis interdum.{{subtitle}}</h1>-->
+  
+  <h5>Here some of Feautures used using Angular 2.</h5>
+  <p>1. Carousel</p>
+<carousel>
+  <slide>
+    <img src="assets/img/1.jpg" alt="First slide">
+    <div class="carousel-caption opacity-6">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </slide>
+  <slide>
+    <img src="assets/img/2.jpg" alt="Second slide">
+    <div class="carousel-caption opacity-6">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </slide>
+  <slide>
+    <img src="assets/img/3.jpg" alt="Third slide">
+    <div class="carousel-caption opacity-6">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </slide>
+  <slide>
+    <img src="assets/img/4.jpg" alt="Fourth slide">
+    <div class="carousel-caption opacity-6">
+      <h3>Fourth slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </slide>
+</carousel>
+
+</div>
+<div class="row"><p></p>
+</div>
+<div class="text-center"><p>2. Accordion</p>
+  
+<accordion [closeOthers]="oneAtATime">
+  <accordion-group heading="Header">
+    This content is straight in the template.
+  </accordion-group>
+  <accordion-group heading="Content 1">
+    <p>Content 1</p>
+  </accordion-group>
+  <accordion-group heading="Content 2">
+    <p>Content 2</p>
+  </accordion-group>
+</accordion>
+</div>
+<div class="row"><p></p></div>
+<p>3. Pop-up Modal</p>
+<button type="button" class="btn btn-primary" (click)="showModal()">Render auto-shown modal</button>
+<div *ngIf="isModalShown" [config]="{ show: true }" (onHidden)="onHidden()" bsModal #autoShownModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Auto shown modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="hideModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>I am a modal that is shown right after initialization!</p>
+        <p>I wasn't present in DOM until you clicked the button</p>
+        <p>When you close me, I'll be removed from the DOM</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+
+</div>
+
+    <!--<ul>
+       <li *ngFor = "let i of arr">{{i}}</li> 
+    </ul>
+    <p *ngIf="IsTrue">False</p>
+    <p *ngIf="myName=='shanth'">True</p>-->
+    <p></p>
+    <p>4. To Do List</p>
+    <div class="Lisst">
+      <div class="row">
+      <div class="col-md-6">
+      <div class="inp form-group">
+        <input class="form-control" placeholder="Add new" [(ngModel)]="newItem"/><br/>
+        <button (click)="pushItem()" class="btn btn-primary">Add new </button>
+      </div>
+      
+        <ul class="listnone">
+        <li *ngFor="let i of images; let ind = index">{{i}} <span (click)="removeItem(ind)" >X</span></li>
+      </ul>
+      </div>
+      </div>
+    </div>
+<div class="row">
+  <div class="col-md-12">
+  <p>5. Tab Menu</p>
+  <div class="btn-group" role="group" aria-label="Credit Report Navigation">
+  <button (click)="shown = 'TAB1'" type="button" class="btn btn-secondary blackbord">Tab 1 </button>
+  <button (click)="shown = 'TAB2'" type="button" class="btn btn-secondary blackbord">Tab 2</button>
+  <button (click)="shown = 'TAB3'" type="button" class="btn btn-secondary blackbord">Tab 3</button>
+</div>
+<div class="tab">
+<div *ngIf="shown === 'TAB1'">Tab content here 1</div>
+<div *ngIf="shown === 'TAB2'">Tab content here 2</div>
+<div *ngIf="shown === 'TAB3'">Tab content here 3</div>
+</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <p>6. {{ titl }}</p>
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="4">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+   
+  </div>
+</div>
+<!--<div class="row">
+  <div class="col-md-6">
+    <h3>Angular 2 Form Validations Demo</h3>
+    <form  #userForm="ngForm"
+    (ngSubmit)="onSubmit(userForm.value)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" name="name" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" name="email" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="email">Select City</label>
+        <select class="form-control" name="city" ngModel>
+          <option value="chennai">Chennai</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="delhi">Delhi</option>
+        </select>
+
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>-->
+
+
+        <div class="text-center">
+            <h5>Angular 2 - Pagination Example with logic like Google</h5>
+ 
+            <!-- items being paged -->
+            <div *ngFor="let item of pagedItems">{{item.name}}</div>
+ 
+            <!-- pager -->
+            <ul *ngIf="pager.pages && pager.pages.length" class="pagination pointer">
+                <li [ngClass]="{disabled:pager.currentPage === 1}">
+                    <a (click)="setPage(1)">First</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === 1}" class="pointer">
+                    <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+                </li>
+                <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="pointer">
+                    <a (click)="setPage(page)">{{page}}</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="pointer">
+                    <a (click)="setPage(pager.currentPage + 1)">Next</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="pointer">
+                    <a (click)="setPage(pager.totalPages)">Last</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+  
+ <p id="back-top" *ngIf="navIsFixed"><span>Top</span></p>
